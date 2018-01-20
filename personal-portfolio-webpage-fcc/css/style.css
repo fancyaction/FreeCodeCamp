@@ -1,0 +1,32 @@
+html,
+body,
+.view {
+  /*   height: 100%; */
+  font-family: sans-serif;
+  background-color: darkslategrey;
+  color: white;
+}
+
+#about-me {
+  background: url(https://www.dropbox.com/s/fyxy863p5pe3bre/DSC_0052bwblackborder.jpg?raw=1)
+    no-repeat center 25% fixed;
+  background-size: cover;
+  padding: 20% 5%;
+}
+
+#social-media {
+  width: 40%;
+}
+
+#footer {
+  background-color: white;
+  color: black;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #000, #ccc, #000);
+  width: 70%;
+}
