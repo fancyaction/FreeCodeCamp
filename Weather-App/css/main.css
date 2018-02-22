@@ -9,3 +9,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.temp-format {
+    cursor: pointer;
+    color: #006dcc;
+}
+.temp-format:hover {
+    color: #005096;
+}
