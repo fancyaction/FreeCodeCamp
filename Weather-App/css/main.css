@@ -1,47 +1,64 @@
 body {
-    margin: 0;
-    background-color: #161616;
+  margin: 0;
+  background-color: #161616;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
 }
 
 h3,h1,.weather,.temp-min,.temp-max,.arrow {
-    color: #f1f1f1;
+  color: #f1f1f1;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  font-size: 1.8rem;
+  margin: 0.3rem 0;
 }
 
 .arrow {
-    width:50px;
-    height: 50px;
-    color: #f1f1f1;
-    display: inline-block;
-    vertical-align: middle;
-
+  width:50px;
+  height: 50px;
+  color: #f1f1f1;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
 }
 
 .down-arrow {
-    transform:rotate(180deg);
+  transform:rotate(180deg);
 }
 .weather-box {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 42%;
 }
 
 .temp-format {
-    cursor: pointer;
-    color: #006dcc;
+  cursor: pointer;
+  color: #006dcc;
 }
 .temp-format:hover {
-    color: #005096;
+  color: #005096;
+}
+
+.weather-vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
 }
 
 /* Weather effects by Josh Bader: https://codepen.io/joshbader/pen/EjXgqr */
 
 .icon {
     position: relative;
-    display: inline-block;
+    display: none;
     width: 12em;
-    height: 10em;
+    height: 5em;
     font-size: 1em; /* control icon size here */
   }
   
@@ -95,7 +112,7 @@ h3,h1,.weather,.temp-min,.temp-max,.arrow {
     width: 2.5em;
     height: 2.5em;
     margin: -1.25em;
-    background: currentColor;
+    /* background: currentColor; */
     border-radius: 50%;
     box-shadow: 0 0 0 0.375em #fff;
     animation: spin 12s infinite linear;
@@ -144,7 +161,7 @@ h3,h1,.weather,.temp-min,.temp-max,.arrow {
     width: 3.75em;
     height: 3.75em;
     margin: 0.375em 0 0 -2em;
-    background: currentColor;
+    /* background: currentColor; */
   }
   
   .rain:after {
