@@ -5,6 +5,7 @@ const tempFormat = document.querySelector('.temp-format');
 const temp = document.querySelector('.temp');
 const icon = document.querySelector('.weather-icon');
 const weatherDetails = document.querySelector('.weather');
+const vid = document.querySelector('.weather-vid');
 
 let celsius, fahrenheit, tempMaxNum, tempMinNum, weather;
 
@@ -46,22 +47,32 @@ function setInfo(data) {
 switch (weather) {
     case 'Rain':
         icon.appendChild(document.querySelector('.rainy'));
+        document.querySelector('.rainy').style.display = 'inline-block';
+        vid.src = 'video/rain.mp4';
         break;
 
     case 'Thunderstorm':
         icon.appendChild(document.querySelector('.thunder-storm'));
+        document.querySelector('.thunder-storm').style.display = 'inline-block';
+        vid.src = 'video/storm.mp4';
         break;
 
     case 'Snow':
         icon.appendChild(document.querySelector('.flurries'));
+        document.querySelector('.flurries').style.display = 'inline-block';
+        vid.src = 'video/snow.mp4';
         break;
-
+        
     case 'Clear':
         icon.appendChild(document.querySelector('.sunny'));
-    break;
+        document.querySelector('.sunny').style.display = 'inline-block';
+        vid.src = 'video/clear.mp4';
+        break;
     
     default:
         icon.appendChild(document.querySelector('.cloudy'));
+        document.querySelector('.cloudy').style.display = 'inline-block';
+        vid.src = 'video/cloudy.mp4';
 }
 
 // User Story: I can push a button to toggle between Fahrenheit and Celsius.
