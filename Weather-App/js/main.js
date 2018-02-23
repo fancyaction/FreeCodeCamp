@@ -40,7 +40,6 @@ function setInfo(data) {
     tempMin.textContent = tempMinNum  + '°';
     temp.textContent = celsius;
     weather = data.weather[0].main;
-    weatherDetails.textContent = weather;
 }
 
 // User Story: I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.
@@ -49,30 +48,35 @@ switch (weather) {
         icon.appendChild(document.querySelector('.rainy'));
         document.querySelector('.rainy').style.display = 'inline-block';
         vid.src = 'video/rain.mp4';
-        break;
-
+        weatherDetails.textContent = 'Rain';
+    break;
+    
     case 'Thunderstorm':
         icon.appendChild(document.querySelector('.thunder-storm'));
         document.querySelector('.thunder-storm').style.display = 'inline-block';
         vid.src = 'video/storm.mp4';
-        break;
-
+        weatherDetails.textContent = 'Thunderstorm';
+    break;
+    
     case 'Snow':
         icon.appendChild(document.querySelector('.flurries'));
         document.querySelector('.flurries').style.display = 'inline-block';
         vid.src = 'video/snow.mp4';
-        break;
-        
+        weatherDetails.textContent = 'Snow';
+    break;
+    
     case 'Clear':
         icon.appendChild(document.querySelector('.sunny'));
         document.querySelector('.sunny').style.display = 'inline-block';
         vid.src = 'video/clear.mp4';
-        break;
+        weatherDetails.textContent = 'Sunny';
+    break;
     
     default:
         icon.appendChild(document.querySelector('.cloudy'));
         document.querySelector('.cloudy').style.display = 'inline-block';
         vid.src = 'video/cloudy.mp4';
+        weatherDetails.textContent = 'Cloudy';
 }
 
 // User Story: I can push a button to toggle between Fahrenheit and Celsius.
